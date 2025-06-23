@@ -6,22 +6,6 @@
 **Môn học:** Nhập môn Xử lý ảnh số  
 **Giảng viên:** Đỗ Hữu Quân
 
----
-
-## Mục lục
-
-- [Giới thiệu](#giới-thiệu)
-- [Công nghệ sử dụng](#công-nghệ-sử-dụng)
-- [Chi tiết các thuật toán & công thức](#chi-tiết-các-thuật-toán--công-thức)
-    - [1. Biến đổi ảnh đảo ngược (Negative/Inverse Transformation)](#1-biến-đổi-ảnh-đảo-ngược-negativeinverse-transformation)
-    - [2. Biến đổi logarit (Log Transformation)](#2-biến-đổi-logarit-log-transformation)
-    - [3. Biến đổi hàm mũ/Gamma (Power-law/Gamma Transformation)](#3-biến-đổi-hàm-mũgamma-power-lawgamma-transformation)
-    - [4. Phân tích mặt phẳng bit (Bit-Plane Slicing)](#4-phân-tích-mặt-phẳng-bit-bit-plane-slicing)
-- [Cấu trúc file](#cấu-trúc-file)
-- [Hướng dẫn sử dụng](#hướng-dẫn-sử-dụng)
-- [Tài liệu tham khảo](#tài-liệu-tham-khảo)
-
----
 
 ## Giới thiệu
 
@@ -30,7 +14,6 @@ Notebook này thực hiện **các phép biến đổi cường độ trên ản
 - Làm nổi bật các chi tiết khó quan sát
 - Trích xuất đặc trưng ảnh (ví dụ: thông tin ở từng bit của pixel)
 
----
 
 ## Công nghệ sử dụng
 
@@ -41,7 +24,6 @@ Notebook này thực hiện **các phép biến đổi cường độ trên ản
 - **ImageIO**: Đọc file ảnh với định dạng hiện đại      
 - **Matplotlib**: Hiển thị ảnh trực quan                   
 
----
 
 ## Chi tiết các thuật toán & công thức
 
@@ -69,8 +51,6 @@ img_np = np.array(img)
 negative_img = 255 - img_np
 ```
 
----
-
 ### 2. Biến đổi logarit (Log Transformation)
 
 **Mục đích:**  
@@ -95,8 +75,6 @@ c = 255 / np.log(1 + np.max(img_np))
 log_img = c * np.log(1 + img_np)
 log_img = np.array(log_img, dtype=np.uint8)
 ```
-
----
 
 ### 3. Biến đổi hàm mũ/Gamma (Power-law/Gamma Transformation)
 
@@ -128,8 +106,6 @@ gamma_img = np.power(img_norm, gamma)
 gamma_img = np.uint8(gamma_img * 255)
 ```
 
----
-
 ### 4. Phân tích mặt phẳng bit (Bit-Plane Slicing)
 
 **Mục đích:**  
@@ -152,8 +128,6 @@ bp_img = bp_img * 255
 - Bit cao (6, 7): Quyết định hình dạng, chi tiết chính của ảnh
 - Bit thấp (0, 1): Chủ yếu là nhiễu hoặc chi tiết nhỏ
 
----
-
 ## Cấu trúc file
 
 ```
@@ -162,9 +136,7 @@ bp_img = bp_img * 255
 ├── README.md       
 ```
 
----
-
-## Hướng dẫn sử dụng
+## Hướng dẫn
 
 ### 1. Cài đặt môi trường
 
@@ -183,8 +155,6 @@ pip install pillow numpy matplotlib imageio
 ### 3. Tùy chỉnh tham số
 
 - Thay đổi giá trị `gamma, c, bit-plane` trong từng cell để quan sát tác động thực tế
-
----
 
 ## Tài liệu tham khảo
 
