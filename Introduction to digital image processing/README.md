@@ -9,10 +9,10 @@
 
 ## Giới thiệu
 
-Notebook này thực hiện **các phép biến đổi cường độ trên ảnh xám** – là những thao tác cơ bản, nền tảng trong lĩnh vực xử lý ảnh số. Các biến đổi này giúp:
+Bài lab này nhằm mục đích thực hiện **các phép biến đổi cường độ trên ảnh xám** – là những thao tác cơ bản, nền tảng trong lĩnh vực xử lý ảnh số. Các biến đổi này giúp:
 - Tăng cường độ tương phản
 - Làm nổi bật các chi tiết khó quan sát
-- Trích xuất đặc trưng ảnh (ví dụ: thông tin ở từng bit của pixel)
+- Trích xuất đặc trưng ảnh 
 
 
 ## Công nghệ sử dụng
@@ -25,13 +25,13 @@ Notebook này thực hiện **các phép biến đổi cường độ trên ản
 - **Matplotlib**: Hiển thị ảnh trực quan                   
 
 
-## Chi tiết các thuật toán & công thức
+## Chi tiết các phép biến đổi & công thức
 
 ### 1. Biến đổi ảnh đảo ngược (Negative/Inverse Transformation)
 
 **Mục đích:**  
 - Đảo ngược giá trị pixel, biến vùng sáng thành tối và ngược lại
-- Làm nổi bật các chi tiết mờ trong vùng tối, tăng khả năng nhận diện vật thể (thường dùng cho ảnh X-quang)
+- Làm nổi bật các chi tiết mờ trong vùng tối, tăng khả năng nhận diện vật thể (thường dùng cho ảnh X-ray)
 
 **Công thức toán học:**  
 ```math
