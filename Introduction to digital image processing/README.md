@@ -50,6 +50,7 @@ s = L - 1 - r
 img_np = np.array(img)
 negative_img = 255 - img_np
 ```
+---
 
 ### 2. Biến đổi logarit (Log Transformation)
 
@@ -75,6 +76,7 @@ c = 255 / np.log(1 + np.max(img_np))
 log_img = c * np.log(1 + img_np)
 log_img = np.array(log_img, dtype=np.uint8)
 ```
+---
 
 ### 3. Biến đổi hàm mũ/Gamma (Power-law/Gamma Transformation)
 
@@ -105,6 +107,7 @@ img_norm = img_np / 255.0
 gamma_img = np.power(img_norm, gamma)
 gamma_img = np.uint8(gamma_img * 255)
 ```
+---
 
 ### 4. Phân tích mặt phẳng bit (Bit-Plane Slicing)
 
@@ -128,11 +131,13 @@ bp_img = bp_img * 255
 - Bit cao (6, 7): Quyết định hình dạng, chi tiết chính của ảnh
 - Bit thấp (0, 1): Chủ yếu là nhiễu hoặc chi tiết nhỏ
 
+---
+
 ## Cấu trúc file
 
 ```
 ├── main.ipynb      
-├── bird.png        
+├── image.png        
 ├── README.md       
 ```
 
@@ -148,13 +153,15 @@ pip install pillow numpy matplotlib imageio
 
 ### 2. Chạy notebook
 
-- Mở Jupyter Notebook hoặc Jupyter Lab
+- Mở Jupyter Notebook trên VSCode/Colab
 - Chạy từng cell để xem kết quả của các thuật toán
 - Nếu có lỗi không tìm thấy ảnh, đảm bảo file ảnh đã được đặt đúng vị trí
 
 ### 3. Tùy chỉnh tham số
 
 - Thay đổi giá trị `gamma, c, bit-plane` trong từng cell để quan sát tác động thực tế
+
+---
 
 ## Tài liệu tham khảo
 
