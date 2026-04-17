@@ -1,0 +1,10 @@
+{
+  "num_topics": 30,
+  "passes": 12,
+  "iterations": 150,
+  "vocabulary_size": 96905,
+  "num_documents": 149981,
+  "coherence_score": 0.5237112226453302,
+  "total_original_docs": 160000,
+  "sample_size": 150000
+}
